@@ -1,7 +1,7 @@
 package common
 
 import (
-	"github.com/tuya/tuya-cloud-sdk-go/pkg/tylog"
+	"github.com/soulik/tuya-cloud-sdk-go/pkg/tylog"
 	"sync"
 	"time"
 )
@@ -41,19 +41,19 @@ func GetToken() (string, error) {
 	LocalToken.Mu.RUnlock()
 	// token already exists
 	if t != "" {
-		if expire.Sub(time.Now())<=0{
+		if expire.Sub(time.Now()) <= 0 {
 			// token is expired
 			_, err := GetTokenAPI()
 			if err != nil {
 				return "", err
 			}
-		}else if expire.Sub(time.Now())>0 && expire.Sub(time.Now())<=30*time.Second {
+		} else if expire.Sub(time.Now()) > 0 && expire.Sub(time.Now()) <= 30*time.Second {
 			// token will expire after 30s
 			_, err := DoRefreshToken()
 			if err != nil {
 				return "", err
 			}
-		}else{
+		} else {
 			return t, nil
 		}
 	}

@@ -3,7 +3,7 @@ package infrared
 import (
 	"testing"
 
-	"github.com/tuya/tuya-cloud-sdk-go/api/common"
+	"github.com/soulik/tuya-cloud-sdk-go/api/common"
 )
 
 func TestBrandsByRemoteIndex(t *testing.T) {

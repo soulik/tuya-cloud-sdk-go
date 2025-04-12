@@ -3,7 +3,7 @@ package device
 import (
 	"fmt"
 
-	"github.com/tuya/tuya-cloud-sdk-go/api/common"
+	"github.com/soulik/tuya-cloud-sdk-go/api/common"
 )
 
 type GetDeviceFunctionByCategoryReq struct {
@@ -18,7 +18,7 @@ func (t *GetDeviceFunctionByCategoryReq) API() string {
 	return fmt.Sprintf("/v1.0/functions/%s", t.Category)
 }
 
-//GetDeviceFunctionByCategory Obtain function list based on category
+// GetDeviceFunctionByCategory Obtain function list based on category
 func GetDeviceFunctionByCategory(category string) (*GetDeviceFunctionResponse, error) {
 	a := &GetDeviceFunctionByCategoryReq{Category: category}
 	resp := &GetDeviceFunctionResponse{}

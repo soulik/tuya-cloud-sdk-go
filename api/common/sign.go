@@ -11,7 +11,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/tuya/tuya-cloud-sdk-go/config"
+	"github.com/soulik/tuya-cloud-sdk-go/config"
 )
 
 func GetBizSign(token, timestamp string) string {

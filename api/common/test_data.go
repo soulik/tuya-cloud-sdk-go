@@ -3,7 +3,7 @@ package common
 import (
 	"log"
 
-	"github.com/tuya/tuya-cloud-sdk-go/config"
+	"github.com/soulik/tuya-cloud-sdk-go/config"
 )
 
 type ExampleData struct {

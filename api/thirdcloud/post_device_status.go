@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tuya/tuya-cloud-sdk-go/api/common"
+	"github.com/soulik/tuya-cloud-sdk-go/api/common"
 )
 
 type PostDevicesStatusReq struct {

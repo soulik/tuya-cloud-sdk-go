@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/tuya/tuya-cloud-sdk-go/config"
+	"github.com/soulik/tuya-cloud-sdk-go/config"
 
-	"github.com/tuya/tuya-cloud-sdk-go/pkg/tylog"
+	"github.com/soulik/tuya-cloud-sdk-go/pkg/tylog"
 )
 
 func DoAPIRequest(a APIRequest, resp interface{}) error {
