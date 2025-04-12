@@ -44,9 +44,11 @@ type Property struct {
 }
 
 type QueryDevicePropertiesResponse struct {
-	Success bool       `json:"success"`
-	T       int64      `json:"t"`
-	Result  []Property `json:"result"`
+	Success bool  `json:"success"`
+	T       int64 `json:"t"`
+	Result  []struct {
+		Properties []Property `json:"properties"`
+	} `json:"result"`
 
 	// error info
 	Code int    `json:"code"`
