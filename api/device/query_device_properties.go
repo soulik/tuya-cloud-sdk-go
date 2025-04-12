@@ -46,7 +46,7 @@ type Property struct {
 type QueryDevicePropertiesResponse struct {
 	Success bool  `json:"success"`
 	T       int64 `json:"t"`
-	Result  []struct {
+	Result  struct {
 		Properties []Property `json:"properties"`
 	} `json:"result"`
 
