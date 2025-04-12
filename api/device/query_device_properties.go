@@ -38,7 +38,7 @@ type Property struct {
 	Code       string      `json:"code"`
 	Value      interface{} `json:"value"`
 	DpId       int         `json:"dp_id"`
-	Time       int         `json:"time"`
+	Time       int64       `json:"time"`
 	Type       string      `json:"type"`
 	CustomName string      `json:"custom_name"`
 }
