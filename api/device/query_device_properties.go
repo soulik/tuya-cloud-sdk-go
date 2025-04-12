@@ -16,7 +16,7 @@ func (t *QueryDevicePropertiesReq) Method() string {
 }
 
 func (t *QueryDevicePropertiesReq) API() string {
-	return fmt.Sprintf("/v2.0/cloud/thing/%s/shadow/properties", t.DeviceID)
+	return fmt.Sprintf("/v2.0/cloud/thing/batch?device_ids=%s", t.DeviceID)
 }
 
 // QueryDeviceProperties Based on the device ID, query the property status reported by the device to the cloud.
